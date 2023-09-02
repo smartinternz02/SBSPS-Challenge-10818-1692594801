@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Campus Placement Prediction - Result</title>
+    <style>
+      .result {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    background-color: rgb(238, 228, 216);
+    padding: 20px; /* Add padding to the div */
+    text-align: center;
+    height: 100vh; /* Make the div take up the full viewport height */
+}
+     .p{
+  font-size: 50px;
+  font-weight: bolder;
+     }
+
+</style>
+</head>
+
+<body>
+    <div class="result"> 
+      <div class="p">
+          <p><b>Campus Placement Prediction - Result</b></p>  
+      </div> 
+        {% if prediction== 1 %}
+				<h1>Prediction: <span class='selected'>YOUR LIKELY TO BE PLACED.</span></h1>
+        
+        {% elif prediction== 0 %}
+				<h1>Prediction: <span class='notselected'>YOUR LIKELY TO BE NOT PLACED</span></h1>
+
+        {% endif %}
+        
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Campus Placement Prediction</title>
+    <style>
+    .ml-container {
+   
+    width: 400px;
+    border: 15px solid rgb(10, 6, 6);
+    display: flex;
+    flex-direction: column; /* To center content vertically */
+    align-items: center;
+    justify-content: center; /* To center content horizontally and vertically */
+    padding: 50px;
+    margin: 0 auto; /* Center the container horizontally */
+    height: 70vh; /* Make the container take up the full viewport height */
+    background-color: rgb(231, 235, 240);
+    }
+    </style>
+
+</head>
+<body>
+    <div class="ml-container">
+    <form action="{{ url_for('predict')}}" method="POST"> 
+        <h1><b>Campus Placement Prediction</b></h1>
+        
+        <br><label for="ssc_p"><b>SSC MARKS</b></label>
+        <input type="text" id="ssc_p" name="ssc_p" placeholder="Your SSC MARKS....." ><br>
+
+
+        <br><label for="hsc_p"><b>HSC MARKS</b></label>
+        <input type="text" id="hsc_p" name="hsc_p" placeholder="Your HSC MARKS....." ><br>
+
+        <br><label for="degree_p"><b>DEGREE MARKS</b></label>
+        <input type="text" id="degree_p" name="degree_p" placeholder="Your DEGREE MARKS....." ><br>
+
+        <br><label for="etest_p"><b>ETEST MARKS</b></label>
+        <input type="text" id="etest_p" name="etest_p" placeholder="Your ETEST MARKS....." ><br>
+
+         <br><label for="mba_p"><b>MBA MARKS</b></label>
+        <input type="text" id="mba_p" name="mba_p" placeholder="Your MBA MARKS....." ><br>
+      
+      <input type="submit" class="my-cta-button" value="Predict">
+    </form>
+  </div>
+
+</body>
+</html>
